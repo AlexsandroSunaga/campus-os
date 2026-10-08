@@ -28,6 +28,15 @@ http://localhost:3014/console
 
 Public pages (`/`, `/features`, `/students`, `/parents`, `/campus-life`, `/contact`) are served by the same web app.
 
+## Tech stack
+
+| Area | Technologies |
+|------|--------------|
+| Frontend | `React`, `TypeScript`, `Vite`, `Ant Design Pro Components`, `Tailwind CSS`, `Zustand`, `React Router`, `dayjs` |
+| Backend | `Node.js`, `Express`, `QR code generation` |
+| Database | `SQLite (better-sqlite3)` |
+| DevOps and tooling | `oxlint` |
+
 ## Run
 
 Setup (once):
