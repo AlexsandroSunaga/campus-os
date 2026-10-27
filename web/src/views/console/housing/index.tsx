@@ -4,7 +4,7 @@ import { api } from "@/api/client";
 
 export default function Page() {
   const [rows, setRows] = useState<any[]>([]);
-  useEffect(() => { api("/housing").then(setRows); }, []);
+  useEffect(() => { api<any[]>("/housing").then(setRows); }, []);
   return (
     <div>
       <h1 className="text-2xl font-semibold">Housing & residence life</h1>

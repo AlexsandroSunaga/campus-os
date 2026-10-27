@@ -9,8 +9,8 @@ export default function RegistrarPage() {
   const [dept, setDept] = useState("all");
 
   useEffect(() => {
-    api("/courses").then(setCourses);
-    api("/sections").then(setSections);
+    api<any[]>("/courses").then(setCourses);
+    api<any[]>("/sections").then(setSections);
   }, []);
 
   const filtered = dept === "all" ? courses : courses.filter((c) => c.department === dept);

@@ -5,7 +5,7 @@ import { api, qrUrl } from "@/api/client";
 export default function EventsPage() {
   const [events, setEvents] = useState<any[]>([]);
   const [token, setToken] = useState("");
-  useEffect(() => { api("/events").then(setEvents); }, []);
+  useEffect(() => { api<any[]>("/events").then(setEvents); }, []);
   async function register(eventId: number) {
     const data = await api<{ token: string }>("/register", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ event_id: eventId, email: "student@campus.demo" }) });
     setToken(data.token);
